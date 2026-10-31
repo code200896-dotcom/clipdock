@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: clipdock-downloader
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DOWNLOAD_PASSWORD
+        generateValue: true
